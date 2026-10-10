@@ -8,3 +8,7 @@ node_modules/
 .wrangler/
 .dev.vars
 
+# 构建产物：由 npm run generate（本地）或 Cloudflare 构建时生成，不入仓库
+public/releases.json
+.cache/
+

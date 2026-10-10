@@ -4,7 +4,8 @@
   "description": "CuRelease (See you release) - A GitHub Release viewer hosted on Cloudflare Pages, optimized for users in China.",
   "type": "module",
   "scripts": {
-    "generate": "node scripts/generate.js"
+    "generate": "node scripts/generate.js",
+    "sync-check": "node scripts/sync-check.js"
   },
   "engines": {
     "node": ">=18.0.0"

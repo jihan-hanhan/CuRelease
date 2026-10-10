@@ -19,16 +19,29 @@ CuRelease 把指定 GitHub 仓库的 Release 信息渲染成一个静态页面�
 ## 工作原理
 
 ```
-config.json (指定 owner/repo 等)
-       ↓
-GitHub Actions 定时调用 GitHub API
-       ↓ 生成 public/releases.json 并提交回仓库
-Cloudflare Pages 自动构建部署
-       ↓
-用户访问页面 → 读取 releases.json → 展示 Release 与文件
-       ↓
-点击下载 → 直连 GitHub 官方源链 / 国内加速站
+                                    ┌─────────────────────────────────────┐
+GitHub Actions（每 15 分钟）          │  Cloudflare 构建（仅在数据变化时）    │
+                                    │                                     │
+  调用 GitHub API                   │   npm run generate                  │
+  与 Actions 缓存中的快照对比        │   → CF 服务器现场请求 GitHub API     │
+        │                           │   → 生成 public/releases.json       │
+        ├─ 无变化 → 结束，不构建     │   → wrangler deploy 部署静态资源     │
+        │                           └─────────────────────────────────────┘
+        └─ 有变化 → POST Deploy Hook ────────────────┘
+                                    │
+                                    ▼
+                        用户访问页面 → 读取 releases.json
+                                    │
+                                    ▼
+                  点击下载 → 直连 GitHub 官方源链 / 国内加速站
 ```
+
+要点：
+
+- **GitHub Actions 从不向 main 分支提交文件**，不会与开发者的本地提交产生分叉。
+- `releases.json` 只在 Cloudflare 构建时生成，不入库（本地预览用的副本已被 git 忽略）。
+- 只有 Release 数据真正变化时才触发 CF 构建，免费构建额度（每月 3,000 分钟）几乎用不完。
+- 推送代码到 main 时 Cloudflare 会自动构建一次，同样会现场生成最新数据。
 
 ## 快速开始
 
@@ -86,46 +99,38 @@ npm run generate
 
 > 如果本机有公司代理导致证书报错，可设置 `NODE_OPTIONS=--use-system-ca` 后再运行。
 
-### 4. 启用 GitHub Actions
+### 4. 部署到 Cloudflare Workers 并创建 Deploy Hook
 
-仓库的 `.github/workflows/generate.yml` 会在以下情况自动生成 `releases.json`：
-
-- 每 15 分钟（定时同步）
-- 推送到 `main` / `master` 分支且改动了配置或脚本
-- 手动触发（Actions 页面点击 Run workflow）
-
-首次使用请在 GitHub 仓库 **Settings → Actions → General** 中确认 Workflow 权限为
-"Read and write permissions"，以便 Action 能提交 `releases.json`。
-
-### 5. 部署到 Cloudflare
-
-两种方式任选其一。仓库根目录已附带 `wrangler.jsonc`（纯静态资源配置），
-**用于阻止 Wrangler 把根目录的 `config.json` 误判为 Hugo 站点**，两种部署方式都不会因此出错。
-
-#### 方式 A：Cloudflare Workers（Workers Builds 连接 Git）
+仓库根目录已附带 `wrangler.jsonc`（纯静态资源配置），
+**用于阻止 Wrangler 把根目录的 `config.json` 误判为 Hugo 站点**。
 
 1. Cloudflare Dashboard → Workers & Pages → Create → Workers → **Deploy with Git**（连接 GitHub 仓库）
 2. 构建设置：
-   - **Build command**：留空（纯静态，无需构建；`releases.json` 已由 GitHub Actions 生成）
+   - **Build command**：`npm run generate`（构建时现场请求 GitHub API 生成 `releases.json`）
    - **Deploy command**：`npx wrangler deploy`
 3. 保存并部署，之后访问 `https://curelease.<你的子域>.workers.dev`
+4. 进入该 Worker → **Settings → Builds & Deployments → Deploy hooks**：
+   - 新建一个 Deploy Hook（名称随意，比如 `release-sync`）
+   - 复制生成的 URL（形如 `https://api.cloudflare.com/client/v4/accounts/.../deployments`）
 
 > 如果之前已创建过 Worker 且构建日志出现 `npx hugo` 失败，
-> 把含 `wrangler.jsonc` 的最新代码 push 到仓库后重新部署即可；
-> 并在 Worker → Settings → Builds 中确认 Build command 为空。
+> 把含 `wrangler.jsonc` 的最新代码 push 到仓库，
+> 并在 Worker → Settings → Builds 中把 Build command 改为 `npm run generate` 后重新部署即可。
 
-#### 方式 B：Cloudflare Pages
+### 5. 配置 GitHub Actions（定时同步）
 
-1. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git
-2. 选择你的仓库
-3. 构建设置：
-   - **Framework preset**: None
-   - **Build command**: 留空
-   - **Build output directory**: `public`
-4. 保存并部署
+1. 在 GitHub 仓库 **Settings → Secrets and variables → Actions → New repository secret**：
+   - 名称：`CF_DEPLOY_HOOK_URL`
+   - 值：上一步复制的 Deploy Hook URL
+2. 工作流 `.github/workflows/sync-releases.yml` 会：
+   - 每 15 分钟请求一次 GitHub API，与缓存快照对比
+   - **仅在 Release 数据变化时**通过 Deploy Hook 触发 Cloudflare 重新构建
+   - 不向仓库提交任何文件，因此不会干扰你本地的 git 操作
+3. 首次可在仓库 **Actions → Sync releases to Cloudflare → Run workflow** 手动触发一次，
+   建立数据基线并立即部署
 
-两种方式下，每次仓库有新提交（包括 Actions 自动更新 `releases.json`），Cloudflare 都会自动重新部署。
-（只有 Release 数据真正变化时 Action 才会提交，不会产生无意义的重复部署。）
+> 使用 Cloudflare Pages 也可以：构建命令填 `npm run generate`，输出目录 `public`，
+> 并在 Pages → Settings → Deploy hooks 创建 Hook URL，其余步骤相同。
 
 ## 配置项说明
 
@@ -158,11 +163,13 @@ CuRelease/
 │   ├── css/style.css        # GitHub 风格样式
 │   ├── js/app.js            # 前端渲染逻辑
 │   ├── vendor/              # 本地 vendored 依赖（marked + DOMPurify，无需联网 CDN）
-│   └── releases.json        # 由脚本/Action 生成
+│   └── releases.json        # 构建时自动生成（不入仓库，已 gitignore）
 ├── scripts/
-│   └── generate.js          # 读取 config 并生成 releases.json
+│   ├── generate.js          # CF 构建/本地预览时生成 releases.json
+│   ├── sync-check.js        # GitHub Actions 定时检查数据是否变化
+│   └── lib/releases.js      # 共享的 GitHub API 与数据处理逻辑
 └── .github/workflows/
-    └── generate.yml         # 定时生成 releases.json
+    └── sync-releases.yml    # 定时对比快照，变化时才触发 CF Deploy Hook
 ```
 
 ## 注意事项

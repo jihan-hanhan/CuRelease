@@ -1,0 +1,70 @@
+name: Sync releases to Cloudflare
+
+# 设计说明：
+# - 本工作流【不会】向 main 分支提交任何文件，避免与开发者本地提交分叉。
+# - 每 15 分钟在 GitHub 的服务器上请求一次 GitHub API（与国内网络无关），
+#   把数据快照存在 GitHub Actions 缓存里进行对比。
+# - 只有 Release 数据真正变化（发新版、下载次数变化等）时，
+#   才 POST 一个 Cloudflare Deploy Hook，让 CF 重新构建（构建时才现场生成 releases.json）。
+# - 推代码到 main 时，Cloudflare Workers Builds 会自动构建，无需本工作流参与。
+
+on:
+  schedule:
+    # 每 15 分钟轮询一次（可按需调整）
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+# 只读仓库代码 + 使用 Actions 缓存（actions:write 是缓存 API 所需）
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  check-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Restore previous release snapshot
+        uses: actions/cache/restore@v4
+        id: snapshot
+        with:
+          path: .cache/releases.json
+          key: releases-snapshot-${{ github.run_id }}
+          restore-keys: |
+            releases-snapshot-
+
+      - name: Check whether release data changed
+        id: check
+        run: npm run sync-check
+        env:
+          # 可选项：传入 Token 提高 GitHub API 限流（公开仓库不传也够用）
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Save new snapshot when changed
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/releases.json
+          key: releases-snapshot-${{ github.run_id }}
+
+      - name: Trigger Cloudflare deployment
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          if [ -z "${CF_DEPLOY_HOOK_URL}" ]; then
+            echo "::error::请先在 GitHub Secrets 中配置 CF_DEPLOY_HOOK_URL"
+            exit 1
+          fi
+          echo "正在触发 Cloudflare Deploy Hook ..."
+          curl -fsS -X POST "${CF_DEPLOY_HOOK_URL}"
+          echo
+          echo "Cloudflare 构建已触发。"
+        env:
+          CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}
