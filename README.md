@@ -97,9 +97,26 @@ npm run generate
 首次使用请在 GitHub 仓库 **Settings → Actions → General** 中确认 Workflow 权限为
 "Read and write permissions"，以便 Action 能提交 `releases.json`。
 
-### 5. 部署到 Cloudflare Pages
+### 5. 部署到 Cloudflare
 
-1. 登录 Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git
+两种方式任选其一。仓库根目录已附带 `wrangler.jsonc`（纯静态资源配置），
+**用于阻止 Wrangler 把根目录的 `config.json` 误判为 Hugo 站点**，两种部署方式都不会因此出错。
+
+#### 方式 A：Cloudflare Workers（Workers Builds 连接 Git）
+
+1. Cloudflare Dashboard → Workers & Pages → Create → Workers → **Deploy with Git**（连接 GitHub 仓库）
+2. 构建设置：
+   - **Build command**：留空（纯静态，无需构建；`releases.json` 已由 GitHub Actions 生成）
+   - **Deploy command**：`npx wrangler deploy`
+3. 保存并部署，之后访问 `https://curelease.<你的子域>.workers.dev`
+
+> 如果之前已创建过 Worker 且构建日志出现 `npx hugo` 失败，
+> 把含 `wrangler.jsonc` 的最新代码 push 到仓库后重新部署即可；
+> 并在 Worker → Settings → Builds 中确认 Build command 为空。
+
+#### 方式 B：Cloudflare Pages
+
+1. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git
 2. 选择你的仓库
 3. 构建设置：
    - **Framework preset**: None
@@ -107,7 +124,8 @@ npm run generate
    - **Build output directory**: `public`
 4. 保存并部署
 
-部署后，每次仓库有新提交（包括 Actions 自动更新 `releases.json`），CF Pages 都会自动重新构建。
+两种方式下，每次仓库有新提交（包括 Actions 自动更新 `releases.json`），Cloudflare 都会自动重新部署。
+（只有 Release 数据真正变化时 Action 才会提交，不会产生无意义的重复部署。）
 
 ## 配置项说明
 
@@ -134,6 +152,7 @@ npm run generate
 CuRelease/
 ├── config.json              # 用户配置（只需改这个）
 ├── package.json
+├── wrangler.jsonc           # Cloudflare Workers 静态资源配置（防框架误判）
 ├── public/
 │   ├── index.html           # 页面入口
 │   ├── css/style.css        # GitHub 风格样式

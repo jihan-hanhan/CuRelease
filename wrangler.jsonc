@@ -1,0 +1,12 @@
+{
+  // CuRelease 是纯静态站点，只托管 public/ 目录，无需任何构建命令。
+  // 此文件用于阻止 Wrangler 的框架自动探测（否则根目录的 config.json 会被误判为 Hugo）。
+  "name": "curelease",
+  "compatibility_date": "2026-10-10",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "public"
+  }
+}

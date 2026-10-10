@@ -3,3 +3,8 @@ node_modules/
 .DS_Store
 .idea/
 .vscode/
+
+# Wrangler 本地产物
+.wrangler/
+.dev.vars
+
