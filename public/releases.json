@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T15:39:21.108Z",
+  "generated_at": "2026-10-10T15:59:09.159Z",
   "config": {
     "repo": {
       "owner": "cli",
@@ -54,7 +54,7 @@
           "id": 599854636,
           "name": "gh_2.102.0_checksums.txt",
           "size": 1971,
-          "download_count": 87784,
+          "download_count": 87902,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_checksums.txt"
         },
@@ -86,7 +86,7 @@
           "id": 599854634,
           "name": "gh_2.102.0_linux_amd64.deb",
           "size": 15392446,
-          "download_count": 129176,
+          "download_count": 129273,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_amd64.deb"
         },
@@ -94,7 +94,7 @@
           "id": 599854650,
           "name": "gh_2.102.0_linux_amd64.rpm",
           "size": 15967030,
-          "download_count": 1759,
+          "download_count": 1761,
           "content_type": "application/x-rpm",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_amd64.rpm"
         },
@@ -102,7 +102,7 @@
           "id": 599854672,
           "name": "gh_2.102.0_linux_amd64.tar.gz",
           "size": 15319960,
-          "download_count": 361091,
+          "download_count": 361522,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_amd64.tar.gz"
         },
@@ -110,7 +110,7 @@
           "id": 599854682,
           "name": "gh_2.102.0_linux_arm64.deb",
           "size": 13980770,
-          "download_count": 12518,
+          "download_count": 12535,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_arm64.deb"
         },
@@ -126,7 +126,7 @@
           "id": 599854680,
           "name": "gh_2.102.0_linux_arm64.tar.gz",
           "size": 13917794,
-          "download_count": 73757,
+          "download_count": 73847,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_arm64.tar.gz"
         },
@@ -134,7 +134,7 @@
           "id": 599854688,
           "name": "gh_2.102.0_linux_armv6.deb",
           "size": 14537692,
-          "download_count": 753,
+          "download_count": 760,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_armv6.deb"
         },
@@ -150,7 +150,7 @@
           "id": 599854712,
           "name": "gh_2.102.0_linux_armv6.tar.gz",
           "size": 14483897,
-          "download_count": 146,
+          "download_count": 147,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_armv6.tar.gz"
         },
@@ -158,7 +158,7 @@
           "id": 599854716,
           "name": "gh_2.102.0_macOS_amd64.zip",
           "size": 15995994,
-          "download_count": 23634,
+          "download_count": 23660,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_macOS_amd64.zip"
         },
@@ -166,7 +166,7 @@
           "id": 599854720,
           "name": "gh_2.102.0_macOS_arm64.zip",
           "size": 14359983,
-          "download_count": 122088,
+          "download_count": 122253,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_macOS_arm64.zip"
         },
@@ -174,7 +174,7 @@
           "id": 599854726,
           "name": "gh_2.102.0_macOS_universal.pkg",
           "size": 29429945,
-          "download_count": 8942,
+          "download_count": 8949,
           "content_type": "application/x-xar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_macOS_universal.pkg"
         },
@@ -182,7 +182,7 @@
           "id": 599854742,
           "name": "gh_2.102.0_windows_386.msi",
           "size": 15118336,
-          "download_count": 4386,
+          "download_count": 4391,
           "content_type": "application/x-msi",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_windows_386.msi"
         },
@@ -198,7 +198,7 @@
           "id": 599854753,
           "name": "gh_2.102.0_windows_amd64.msi",
           "size": 15757312,
-          "download_count": 285593,
+          "download_count": 285957,
           "content_type": "application/x-msi",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_windows_amd64.msi"
         },
@@ -206,7 +206,7 @@
           "id": 599854760,
           "name": "gh_2.102.0_windows_amd64.zip",
           "size": 15512013,
-          "download_count": 107125,
+          "download_count": 107270,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_windows_amd64.zip"
         },
@@ -214,7 +214,7 @@
           "id": 599854776,
           "name": "gh_2.102.0_windows_arm64.msi",
           "size": 14102528,
-          "download_count": 6935,
+          "download_count": 6942,
           "content_type": "application/x-msi",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_windows_arm64.msi"
         },
@@ -246,7 +246,7 @@
           "id": 565857083,
           "name": "gh_2.101.0_checksums.txt",
           "size": 1971,
-          "download_count": 137979,
+          "download_count": 138011,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_checksums.txt"
         },
@@ -278,7 +278,7 @@
           "id": 565857081,
           "name": "gh_2.101.0_linux_amd64.deb",
           "size": 15352870,
-          "download_count": 182957,
+          "download_count": 182962,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_amd64.deb"
         },
@@ -286,7 +286,7 @@
           "id": 565857119,
           "name": "gh_2.101.0_linux_amd64.rpm",
           "size": 15920854,
-          "download_count": 4323,
+          "download_count": 4325,
           "content_type": "application/x-rpm",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_amd64.rpm"
         },
@@ -294,7 +294,7 @@
           "id": 565857134,
           "name": "gh_2.101.0_linux_amd64.tar.gz",
           "size": 15282175,
-          "download_count": 672542,
+          "download_count": 672805,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_amd64.tar.gz"
         },
@@ -302,7 +302,7 @@
           "id": 565857136,
           "name": "gh_2.101.0_linux_arm64.deb",
           "size": 13948022,
-          "download_count": 18802,
+          "download_count": 18804,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_arm64.deb"
         },
@@ -318,7 +318,7 @@
           "id": 565857147,
           "name": "gh_2.101.0_linux_arm64.tar.gz",
           "size": 13885041,
-          "download_count": 133009,
+          "download_count": 133096,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_arm64.tar.gz"
         },
@@ -350,7 +350,7 @@
           "id": 565857203,
           "name": "gh_2.101.0_macOS_amd64.zip",
           "size": 15957303,
-          "download_count": 36916,
+          "download_count": 36918,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_macOS_amd64.zip"
         },
@@ -358,7 +358,7 @@
           "id": 565857200,
           "name": "gh_2.101.0_macOS_arm64.zip",
           "size": 14328800,
-          "download_count": 176692,
+          "download_count": 176724,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_macOS_arm64.zip"
         },
@@ -390,7 +390,7 @@
           "id": 565857685,
           "name": "gh_2.101.0_windows_amd64.msi",
           "size": 15716352,
-          "download_count": 365706,
+          "download_count": 365707,
           "content_type": "application/x-msi",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_windows_amd64.msi"
         },
@@ -398,7 +398,7 @@
           "id": 565857681,
           "name": "gh_2.101.0_windows_amd64.zip",
           "size": 15473232,
-          "download_count": 139052,
+          "download_count": 139054,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_windows_amd64.zip"
         },
@@ -438,7 +438,7 @@
           "id": 542974244,
           "name": "gh_2.100.0_checksums.txt",
           "size": 1971,
-          "download_count": 99130,
+          "download_count": 99153,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_checksums.txt"
         },
@@ -470,7 +470,7 @@
           "id": 542974242,
           "name": "gh_2.100.0_linux_amd64.deb",
           "size": 15227466,
-          "download_count": 135691,
+          "download_count": 135700,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_linux_amd64.deb"
         },
@@ -486,7 +486,7 @@
           "id": 542974264,
           "name": "gh_2.100.0_linux_amd64.tar.gz",
           "size": 15152253,
-          "download_count": 769972,
+          "download_count": 770094,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_linux_amd64.tar.gz"
         },
@@ -494,7 +494,7 @@
           "id": 542974268,
           "name": "gh_2.100.0_linux_arm64.deb",
           "size": 13854760,
-          "download_count": 13490,
+          "download_count": 13491,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_linux_arm64.deb"
         },
@@ -510,7 +510,7 @@
           "id": 542974279,
           "name": "gh_2.100.0_linux_arm64.tar.gz",
           "size": 13783869,
-          "download_count": 120256,
+          "download_count": 120273,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_linux_arm64.tar.gz"
         },
@@ -542,7 +542,7 @@
           "id": 542974293,
           "name": "gh_2.100.0_macOS_amd64.zip",
           "size": 15818005,
-          "download_count": 30497,
+          "download_count": 30498,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_macOS_amd64.zip"
         },
@@ -550,7 +550,7 @@
           "id": 542974295,
           "name": "gh_2.100.0_macOS_arm64.zip",
           "size": 14212224,
-          "download_count": 120025,
+          "download_count": 120030,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_macOS_arm64.zip"
         },
@@ -582,7 +582,7 @@
           "id": 542974317,
           "name": "gh_2.100.0_windows_amd64.msi",
           "size": 15564800,
-          "download_count": 293144,
+          "download_count": 293146,
           "content_type": "application/x-msi",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_windows_amd64.msi"
         },
@@ -590,7 +590,7 @@
           "id": 542974322,
           "name": "gh_2.100.0_windows_amd64.zip",
           "size": 15326700,
-          "download_count": 103077,
+          "download_count": 103079,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_windows_amd64.zip"
         },
@@ -606,7 +606,7 @@
           "id": 542974345,
           "name": "gh_2.100.0_windows_arm64.zip",
           "size": 13746870,
-          "download_count": 2472,
+          "download_count": 2473,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_windows_arm64.zip"
         }
@@ -678,7 +678,7 @@
           "id": 540091442,
           "name": "gh_2.99.0_linux_amd64.tar.gz",
           "size": 14930607,
-          "download_count": 166015,
+          "download_count": 166041,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.99.0/gh_2.99.0_linux_amd64.tar.gz"
         },
@@ -742,7 +742,7 @@
           "id": 540091462,
           "name": "gh_2.99.0_macOS_arm64.zip",
           "size": 14001348,
-          "download_count": 21084,
+          "download_count": 21087,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.99.0/gh_2.99.0_macOS_arm64.zip"
         },
@@ -862,7 +862,7 @@
           "id": 522857897,
           "name": "gh_2.98.0_linux_amd64.rpm",
           "size": 15499377,
-          "download_count": 4968,
+          "download_count": 4969,
           "content_type": "application/x-rpm",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.98.0/gh_2.98.0_linux_amd64.rpm"
         },
@@ -870,7 +870,7 @@
           "id": 522857901,
           "name": "gh_2.98.0_linux_amd64.tar.gz",
           "size": 14863663,
-          "download_count": 667701,
+          "download_count": 667781,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.98.0/gh_2.98.0_linux_amd64.tar.gz"
         },
@@ -894,7 +894,7 @@
           "id": 522857902,
           "name": "gh_2.98.0_linux_arm64.tar.gz",
           "size": 13523338,
-          "download_count": 88353,
+          "download_count": 88368,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.98.0/gh_2.98.0_linux_arm64.tar.gz"
         },
@@ -934,7 +934,7 @@
           "id": 522857972,
           "name": "gh_2.98.0_macOS_arm64.zip",
           "size": 13938611,
-          "download_count": 87063,
+          "download_count": 87071,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.98.0/gh_2.98.0_macOS_arm64.zip"
         },
@@ -1014,7 +1014,7 @@
           "id": 496108250,
           "name": "gh_2.97.0_checksums.txt",
           "size": 1950,
-          "download_count": 126026,
+          "download_count": 126029,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_checksums.txt"
         },
@@ -1046,7 +1046,7 @@
           "id": 496108248,
           "name": "gh_2.97.0_linux_amd64.deb",
           "size": 14841130,
-          "download_count": 268095,
+          "download_count": 268098,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_linux_amd64.deb"
         },
@@ -1054,7 +1054,7 @@
           "id": 496108256,
           "name": "gh_2.97.0_linux_amd64.rpm",
           "size": 15424894,
-          "download_count": 22265,
+          "download_count": 22280,
           "content_type": "application/x-rpm",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_linux_amd64.rpm"
         },
@@ -1062,7 +1062,7 @@
           "id": 496108269,
           "name": "gh_2.97.0_linux_amd64.tar.gz",
           "size": 14770812,
-          "download_count": 940938,
+          "download_count": 941040,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_linux_amd64.tar.gz"
         },
@@ -1086,7 +1086,7 @@
           "id": 496108278,
           "name": "gh_2.97.0_linux_arm64.tar.gz",
           "size": 13428558,
-          "download_count": 144781,
+          "download_count": 144794,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_linux_arm64.tar.gz"
         },
@@ -1118,7 +1118,7 @@
           "id": 496108300,
           "name": "gh_2.97.0_macOS_amd64.zip",
           "size": 15418698,
-          "download_count": 28177,
+          "download_count": 28178,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_macOS_amd64.zip"
         },
@@ -1126,7 +1126,7 @@
           "id": 496108298,
           "name": "gh_2.97.0_macOS_arm64.zip",
           "size": 13845290,
-          "download_count": 145879,
+          "download_count": 145881,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_macOS_arm64.zip"
         },
@@ -1166,7 +1166,7 @@
           "id": 496108319,
           "name": "gh_2.97.0_windows_amd64.zip",
           "size": 14938517,
-          "download_count": 162300,
+          "download_count": 162310,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_windows_amd64.zip"
         },
@@ -1206,7 +1206,7 @@
           "id": 464728518,
           "name": "gh_2.96.0_checksums.txt",
           "size": 1950,
-          "download_count": 114374,
+          "download_count": 114379,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_checksums.txt"
         },
@@ -1238,7 +1238,7 @@
           "id": 464728519,
           "name": "gh_2.96.0_linux_amd64.deb",
           "size": 14725844,
-          "download_count": 342679,
+          "download_count": 342680,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_linux_amd64.deb"
         },
@@ -1254,7 +1254,7 @@
           "id": 464728543,
           "name": "gh_2.96.0_linux_amd64.tar.gz",
           "size": 14652560,
-          "download_count": 1647855,
+          "download_count": 1647941,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_linux_amd64.tar.gz"
         },
@@ -1278,7 +1278,7 @@
           "id": 464728549,
           "name": "gh_2.96.0_linux_arm64.tar.gz",
           "size": 13321232,
-          "download_count": 257702,
+          "download_count": 257734,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_linux_arm64.tar.gz"
         },
@@ -1310,7 +1310,7 @@
           "id": 464728560,
           "name": "gh_2.96.0_macOS_amd64.zip",
           "size": 15298430,
-          "download_count": 31181,
+          "download_count": 31184,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_macOS_amd64.zip"
         },
@@ -1318,7 +1318,7 @@
           "id": 464728562,
           "name": "gh_2.96.0_macOS_arm64.zip",
           "size": 13950131,
-          "download_count": 200398,
+          "download_count": 200403,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_macOS_arm64.zip"
         },
@@ -1358,7 +1358,7 @@
           "id": 464728577,
           "name": "gh_2.96.0_windows_amd64.zip",
           "size": 14821821,
-          "download_count": 204559,
+          "download_count": 204571,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_windows_amd64.zip"
         },
@@ -1446,7 +1446,7 @@
           "id": 450525940,
           "name": "gh_2.95.0_linux_amd64.tar.gz",
           "size": 14642738,
-          "download_count": 601452,
+          "download_count": 601461,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_linux_amd64.tar.gz"
         },
@@ -1470,7 +1470,7 @@
           "id": 450525946,
           "name": "gh_2.95.0_linux_arm64.tar.gz",
           "size": 13315600,
-          "download_count": 91440,
+          "download_count": 91445,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_linux_arm64.tar.gz"
         },
@@ -1590,7 +1590,7 @@
           "id": 444075656,
           "name": "gh_2.94.0_checksums.txt",
           "size": 1950,
-          "download_count": 54671,
+          "download_count": 54672,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_checksums.txt"
         },
@@ -1638,7 +1638,7 @@
           "id": 444075681,
           "name": "gh_2.94.0_linux_amd64.tar.gz",
           "size": 14462748,
-          "download_count": 383986,
+          "download_count": 383990,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_linux_amd64.tar.gz"
         },
@@ -1694,7 +1694,7 @@
           "id": 444075718,
           "name": "gh_2.94.0_macOS_amd64.zip",
           "size": 15098336,
-          "download_count": 10766,
+          "download_count": 10767,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_macOS_amd64.zip"
         },
@@ -1702,7 +1702,7 @@
           "id": 444075720,
           "name": "gh_2.94.0_macOS_arm64.zip",
           "size": 13778337,
-          "download_count": 77404,
+          "download_count": 77405,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_macOS_arm64.zip"
         },
@@ -1822,7 +1822,7 @@
           "id": 431301761,
           "name": "gh_2.93.0_linux_amd64.rpm",
           "size": 14959127,
-          "download_count": 9170,
+          "download_count": 9171,
           "content_type": "application/x-rpm",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.93.0/gh_2.93.0_linux_amd64.rpm"
         },
@@ -1830,7 +1830,7 @@
           "id": 431301770,
           "name": "gh_2.93.0_linux_amd64.tar.gz",
           "size": 14332871,
-          "download_count": 900439,
+          "download_count": 900465,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.93.0/gh_2.93.0_linux_amd64.tar.gz"
         },
@@ -1854,7 +1854,7 @@
           "id": 431301780,
           "name": "gh_2.93.0_linux_arm64.tar.gz",
           "size": 13035187,
-          "download_count": 169968,
+          "download_count": 169973,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.93.0/gh_2.93.0_linux_arm64.tar.gz"
         },
@@ -1974,7 +1974,7 @@
           "id": 407353493,
           "name": "gh_2.92.0_checksums.txt",
           "size": 1950,
-          "download_count": 109806,
+          "download_count": 109809,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_checksums.txt"
         },
@@ -2006,7 +2006,7 @@
           "id": 407353499,
           "name": "gh_2.92.0_linux_amd64.deb",
           "size": 14365816,
-          "download_count": 420350,
+          "download_count": 420356,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_linux_amd64.deb"
         },
@@ -2014,7 +2014,7 @@
           "id": 407353502,
           "name": "gh_2.92.0_linux_amd64.rpm",
           "size": 14884189,
-          "download_count": 25051,
+          "download_count": 25054,
           "content_type": "application/x-rpm",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_linux_amd64.rpm"
         },
@@ -2022,7 +2022,7 @@
           "id": 407353509,
           "name": "gh_2.92.0_linux_amd64.tar.gz",
           "size": 14296784,
-          "download_count": 1705554,
+          "download_count": 1705582,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_linux_amd64.tar.gz"
         },
@@ -2046,7 +2046,7 @@
           "id": 407353515,
           "name": "gh_2.92.0_linux_arm64.tar.gz",
           "size": 13002970,
-          "download_count": 181191,
+          "download_count": 181192,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_linux_arm64.tar.gz"
         },
@@ -2094,7 +2094,7 @@
           "id": 407353536,
           "name": "gh_2.92.0_macOS_universal.pkg",
           "size": 27667917,
-          "download_count": 38040,
+          "download_count": 38046,
           "content_type": "application/x-xar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_macOS_universal.pkg"
         },
@@ -2126,7 +2126,7 @@
           "id": 407353546,
           "name": "gh_2.92.0_windows_amd64.zip",
           "size": 14468591,
-          "download_count": 127182,
+          "download_count": 127183,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_windows_amd64.zip"
         },
@@ -2214,7 +2214,7 @@
           "id": 402406774,
           "name": "gh_2.91.0_linux_amd64.tar.gz",
           "size": 14287621,
-          "download_count": 267222,
+          "download_count": 267229,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.91.0/gh_2.91.0_linux_amd64.tar.gz"
         },
@@ -2550,7 +2550,7 @@
           "id": 382152807,
           "name": "gh_2.89.0_checksums.txt",
           "size": 1950,
-          "download_count": 73932,
+          "download_count": 73934,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.89.0/gh_2.89.0_checksums.txt"
         },
@@ -2598,7 +2598,7 @@
           "id": 382152824,
           "name": "gh_2.89.0_linux_amd64.tar.gz",
           "size": 14279890,
-          "download_count": 973321,
+          "download_count": 973343,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.89.0/gh_2.89.0_linux_amd64.tar.gz"
         },
@@ -2662,7 +2662,7 @@
           "id": 382152851,
           "name": "gh_2.89.0_macOS_arm64.zip",
           "size": 13593749,
-          "download_count": 100804,
+          "download_count": 100805,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.89.0/gh_2.89.0_macOS_arm64.zip"
         },
@@ -2702,7 +2702,7 @@
           "id": 382152866,
           "name": "gh_2.89.0_windows_amd64.zip",
           "size": 14454894,
-          "download_count": 135874,
+          "download_count": 135878,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.89.0/gh_2.89.0_windows_amd64.zip"
         },
@@ -2774,7 +2774,7 @@
           "id": 372317889,
           "name": "gh_2.88.1_linux_amd64.deb",
           "size": 13963618,
-          "download_count": 129610,
+          "download_count": 129611,
           "content_type": "application/x-debian-package",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.88.1/gh_2.88.1_linux_amd64.deb"
         },
@@ -2790,7 +2790,7 @@
           "id": 372317909,
           "name": "gh_2.88.1_linux_amd64.tar.gz",
           "size": 13896340,
-          "download_count": 1054939,
+          "download_count": 1055033,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.88.1/gh_2.88.1_linux_amd64.tar.gz"
         },
@@ -2814,7 +2814,7 @@
           "id": 372317913,
           "name": "gh_2.88.1_linux_arm64.tar.gz",
           "size": 12646811,
-          "download_count": 268680,
+          "download_count": 268715,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.88.1/gh_2.88.1_linux_arm64.tar.gz"
         },
@@ -2854,7 +2854,7 @@
           "id": 372317935,
           "name": "gh_2.88.1_macOS_arm64.zip",
           "size": 13235085,
-          "download_count": 15003,
+          "download_count": 15005,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.88.1/gh_2.88.1_macOS_arm64.zip"
         },
@@ -3126,7 +3126,7 @@
           "id": 360964154,
           "name": "gh_2.87.3_checksums.txt",
           "size": 1950,
-          "download_count": 31515,
+          "download_count": 31517,
           "content_type": "text/plain; charset=utf-8",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_checksums.txt"
         },
@@ -3174,7 +3174,7 @@
           "id": 360964172,
           "name": "gh_2.87.3_linux_amd64.tar.gz",
           "size": 13736491,
-          "download_count": 2257268,
+          "download_count": 2257466,
           "content_type": "application/x-gtar",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_linux_amd64.tar.gz"
         },
@@ -3238,7 +3238,7 @@
           "id": 360964196,
           "name": "gh_2.87.3_macOS_arm64.zip",
           "size": 13118103,
-          "download_count": 37257,
+          "download_count": 37258,
           "content_type": "application/zip",
           "browser_download_url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_macOS_arm64.zip"
         },
