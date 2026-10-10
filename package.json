@@ -1,0 +1,13 @@
+{
+  "name": "curelease",
+  "version": "1.0.0",
+  "description": "CuRelease (See you release) - A GitHub Release viewer hosted on Cloudflare Pages, optimized for users in China.",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,49 @@
+name: Generate releases.json
+
+on:
+  schedule:
+    # 每 15 分钟同步一次（可按需调整）
+    - cron: "*/15 * * * *"
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "config.json"
+      - "scripts/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate releases.json
+        run: npm run generate
+        env:
+          # 可选：传入 GitHub Token 以提高 API 限流（公开仓库可不填）
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit releases.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/releases.json
+          if git diff --staged --quiet; then
+            echo "No changes to releases.json"
+          else
+            git commit -m "chore: update releases.json"
+            git push
+          fi

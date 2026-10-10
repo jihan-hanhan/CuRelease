@@ -1,0 +1,37 @@
+{
+  "repo": {
+    "owner": "cli",
+    "name": "cli"
+  },
+  "title": "CuRelease",
+  "description": "See you release — 一个面向国内用户的 GitHub Release 查看器",
+  "releases": {
+    "per_page": 20,
+    "include_prerelease": true,
+    "include_draft": false,
+    "sort": "desc"
+  },
+  "downloads": {
+    "show_official": true,
+    "show_download_count": true,
+    "mirrors": [
+      {
+        "name": "官方 GitHub 源链",
+        "prefix": ""
+      },
+      {
+        "name": "加速线路 A",
+        "prefix": "https://gh-proxy.example.com/"
+      },
+      {
+        "name": "加速线路 B",
+        "prefix": "https://ghproxy.example.com/"
+      }
+    ],
+    "default_mirror": "官方 GitHub 源链"
+  },
+  "ui": {
+    "default_theme": "auto",
+    "show_release_body": true
+  }
+}
